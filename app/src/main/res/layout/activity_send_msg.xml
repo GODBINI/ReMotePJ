@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/sendmsg_image"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="234dp"
+        android:layout_height="243dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="내용을 입력해주세요."
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textColorHint="#00d7d7"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/SendmsgOkButton"
+        android:background="#00000000"
+        android:textColor="#00d7d7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="21dp"
+        android:text="전송" />
+
+    <Button
+        android:id="@+id/SendmsgCloseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/SendmsgOkButton"
+        android:layout_marginStart="26dp"
+        android:background="#00000000"
+        android:text="취소"
+        android:textColor="#9e9e9e" />
+</RelativeLayout>

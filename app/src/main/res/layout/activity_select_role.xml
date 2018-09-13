@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_role_image"
+    tools:context=".SelectRoleActivity">
+
+    <Button
+        android:id="@+id/ChildButton"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/imgbtn_child"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ParentButton"
+        app:layout_constraintEnd_toStartOf="@+id/ParentButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ParentButton"
+        android:layout_width="0dp"
+        android:layout_height="174dp"
+        android:layout_marginBottom="181dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/imgbtn_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ChildButton" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_image"
+    tools:context=".RegisterActivity">
+
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="114dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/imgbtn_ok_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/R_idText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/R_pwText"
+        app:layout_constraintEnd_toEndOf="@+id/R_pwText"
+        app:layout_constraintStart_toStartOf="@+id/R_pwText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/R_pwText"
+        android:layout_width="187dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="372dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/R_idText" />
+
+    <TextView
+        android:id="@+id/TestText"
+        android:layout_width="274dp"
+        android:layout_height="24dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="398dp" />
+</android.support.constraint.ConstraintLayout>
