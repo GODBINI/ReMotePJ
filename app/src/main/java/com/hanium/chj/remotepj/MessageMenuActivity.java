@@ -13,6 +13,10 @@ public class MessageMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_menu);
 
+        final Intent BeforeIntent = getIntent();
+        final String userID = BeforeIntent.getStringExtra("userID");
+        final String userPassword = BeforeIntent.getStringExtra("userPassword");
+
         Button HomeButton = (Button) findViewById(R.id.HomeButton1);
         Button SendmsgButton = (Button) findViewById(R.id.SendmsgButton);
         Button MsgboxButton = (Button)findViewById(R.id.MsgboxButton);
@@ -21,6 +25,8 @@ public class MessageMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent1 = new Intent(MessageMenuActivity.this, ChildMenuActivity.class);
+                intent1.putExtra("userID",userID);
+                intent1.putExtra("userPassword",userPassword);
                 MessageMenuActivity.this.startActivity(intent1);
             }
         });
@@ -29,6 +35,8 @@ public class MessageMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(MessageMenuActivity.this, SendMsgActivity.class);
+                intent2.putExtra("userID",userID);
+                intent2.putExtra("userPassword",userPassword);
                 MessageMenuActivity.this.startActivity(intent2);
             }
         });
@@ -37,6 +45,8 @@ public class MessageMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent3 = new Intent(MessageMenuActivity.this, MsgBoxActivity.class);
+                intent3.putExtra("userID",userID);
+                intent3.putExtra("userPassword",userPassword);
                 MessageMenuActivity.this.startActivity(intent3);
             }
         });

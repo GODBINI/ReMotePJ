@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#eeeeee"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".AlarmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <TextView
+            android:id="@+id/A_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#d9a1c8"
+            android:gravity="center"
+            android:text="알람 설정"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/YearText"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="1"
+            android:gravity="end"
+            android:hint="2018"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/YearTextView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="년"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/MonthText"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="1"
+            android:gravity="end"
+            android:hint="1~12"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/MonthTextView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="월"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/DayText"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="1"
+            android:gravity="end"
+            android:hint="1~31"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/DayTextView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="일"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/HourText"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="1"
+            android:gravity="end"
+            android:hint="1~24"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/HourTextView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="시"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/MinuteText"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="1"
+            android:gravity="end"
+            android:hint="0~59"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <TextView
+            android:id="@+id/MinuteTextView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="분"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/AlarmText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:hint="알람 메세지를 입력하세요."
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/A_OkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#d9a1c8"
+            android:gravity="center"
+            android:text="확인"
+            android:textColor="#000000" />
+    </LinearLayout>
+</LinearLayout>

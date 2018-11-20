@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eeeeee"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/C_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#000000"
+            android:gravity="center"
+            android:text="연결하기"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/C_IdText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="부모 ID"
+            android:inputType="textPersonName"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/C_NumText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="인증번호"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!-- Notice -->
+
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/C_OkButton"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:onClick="mOnClose"
+            android:padding="16dp"
+            android:text="확인"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!--// 닫기 버튼 -->
+</LinearLayout>

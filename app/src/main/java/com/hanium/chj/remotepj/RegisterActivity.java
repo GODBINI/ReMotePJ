@@ -18,6 +18,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Random;
 
 public class RegisterActivity extends AppCompatActivity {
     private static String IP_ADDRESS = "14.63.161.31";
@@ -27,12 +28,12 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText R_pwText;
     private TextView TestText;
 
-
+    Random rand = new Random();
+    int random = rand.nextInt(9999-1000 +1) + 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         Intent beforeintent = getIntent();
         final String data = beforeintent.getStringExtra("role"); // data 변수에 role 값 저장
         Button RegisterButton = (Button) findViewById(R.id.RegisterButton);
@@ -47,9 +48,15 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String id = R_idText.getText().toString();
                 String pw = R_pwText.getText().toString();
+                String num = random + "";
 
                 InsertData task = new InsertData();
-                task.execute("http://" + IP_ADDRESS + "/register_child.php",id,pw);
+                if(data.equals("parent")) {
+                    task.execute("http://" + IP_ADDRESS + "/register_parent.php", id, pw, num);
+                }
+                else {
+                    task.execute("http://" + IP_ADDRESS + "/register_child.php", id, pw, num);
+                }
 
                 R_idText.setText("");
                 R_pwText.setText("");
@@ -82,6 +89,11 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterIntent.putExtra("response", "S");
                 startActivityForResult(RegisterIntent,1);
             }
+            else if((TestText.getText().toString()).equals("Parent!!")) {
+                RegisterIntent.putExtra("response", "P");
+                RegisterIntent.putExtra("num", random+"");
+                startActivityForResult(RegisterIntent,1);
+            }
         }
 
 
@@ -90,9 +102,10 @@ public class RegisterActivity extends AppCompatActivity {
 
             String id = (String)params[1];
             String pw = (String)params[2];
+            String num = (String)params[3];
 
             String serverURL = (String)params[0];
-            String postParameters = "id=" + id + "&pw=" + pw;
+            String postParameters = "id=" + id + "&pw=" + pw + "&num=" + num;
 
 
             try {

@@ -21,8 +21,12 @@ public class RegisterPopUpActivity extends AppCompatActivity {
 
         Intent BeforeIntent = getIntent();
         final String respones = BeforeIntent.getStringExtra("response");
+        final String num = BeforeIntent.getStringExtra("num");
         if(respones.equals("S")) {
             R_TextView.setText("회원가입 성공!");
+        }
+        else if(respones.equals("P")) {
+            R_TextView.setText("회원가입 성공! *인증번호* :"+num);
         }
         else {
             R_TextView.setText("회원가입 실패");

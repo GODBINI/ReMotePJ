@@ -38,7 +38,9 @@
             android:name=".SelectRolePopupActivity"
             android:theme="@style/PopupTheme" />
         <activity android:name=".ChildMenuActivity" />
-        <activity android:name=".ParentActivity" />
+        <activity
+            android:name=".ParentActivity"
+            android:screenOrientation="landscape" />
         <activity android:name=".MessageMenuActivity" />
         <activity
             android:name=".SendMsgActivity"
@@ -46,7 +48,22 @@
         <activity android:name=".MsgBoxActivity" />
         <activity
             android:name=".RegisterPopUpActivity"
-            android:theme="@style/PopupTheme"></activity>
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".ConnectActivity"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".AlarmActivity"
+            android:theme="@style/PopupTheme" />
+        <activity android:name=".StatusActivity" />
+
+        <receiver android:name=".AlarmReceiver">
+        </receiver>
+
+        <service
+            android:name=".AlarmSoundService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
