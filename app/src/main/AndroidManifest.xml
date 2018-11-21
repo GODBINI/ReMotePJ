@@ -57,13 +57,15 @@
             android:theme="@style/PopupTheme" />
         <activity android:name=".StatusActivity" />
 
-        <receiver android:name=".AlarmReceiver">
-        </receiver>
+        <receiver android:name=".AlarmReceiver"></receiver>
 
         <service
             android:name=".AlarmSoundService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".DelAlarmActivity"
+            android:theme="@style/PopupTheme"></activity>
     </application>
 
 </manifest>

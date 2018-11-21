@@ -30,9 +30,8 @@ public class ChildMenuActivity extends AppCompatActivity {
         final Button MessageButton = (Button) findViewById(R.id.MessageButton);
         final Button ConnectButton = (Button)findViewById(R.id.ConnectButton);
         final Button AlarmButton = (Button)findViewById(R.id.AlarmButton);
-        final Button ImageButton = (Button)findViewById(R.id.ImageButton);
+        final Button DelAlarmButton = (Button)findViewById(R.id.DelAlarmButton);
         final Button StatusButton = (Button)findViewById(R.id.StatusButton);
-        final Button TestButton = (Button)findViewById(R.id.TestButton);
 
         MessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,15 +63,15 @@ public class ChildMenuActivity extends AppCompatActivity {
             }
         });
 
-        /* ImageButton.setOnClickListener(new View.OnClickListener() {
+         DelAlarmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ImageIntent = new Intent(ChildMenuActivity.this, ImageActivity.class);
-                ImageIntent.putExtra("userID",userID);
-                ImageIntent.putExtra("userPassword",userPassword);
-                ChildMenuActivity.this.startActivity(ImageIntent);
+                Intent DelAlarmIntent = new Intent(ChildMenuActivity.this, DelAlarmActivity.class);
+                DelAlarmIntent.putExtra("userID",userID);
+                DelAlarmIntent.putExtra("userPassword",userPassword);
+                ChildMenuActivity.this.startActivity(DelAlarmIntent);
             }
-        }); */
+        });
 
         StatusButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,29 +83,10 @@ public class ChildMenuActivity extends AppCompatActivity {
             }
         });
 
-        TestButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar mCalendar = Calendar.getInstance();
-                mCalendar.setTimeInMillis(System.currentTimeMillis());
-                mCalendar.set(Calendar.SECOND, mCalendar.get(Calendar.SECOND)+10);
-                int Hour = mCalendar.get(Calendar.HOUR);
-                int Minute = mCalendar.get(Calendar.MINUTE);
-                int Se = mCalendar.get(Calendar.SECOND);
 
-                PendingIntent mPendingIntent = PendingIntent.getBroadcast(ChildMenuActivity.this, 0,mAlarmIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-                AlarmManager mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                if(Build.VERSION.SDK_INT >= 23)
-                    mAlarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,mCalendar.getTimeInMillis(),mPendingIntent);
-                else {
-                    if(Build.VERSION.SDK_INT >= 19) {
-                        mAlarmManager.setExact(AlarmManager.RTC_WAKEUP,mCalendar.getTimeInMillis(),mPendingIntent);
-                    } else {
-                        mAlarmManager.set(AlarmManager.RTC_WAKEUP,mCalendar.getTimeInMillis(),mPendingIntent);
-                    }
-                }
-                Toast.makeText(ChildMenuActivity.this,"설정 완료!" + Hour +"시" + Minute +"분" + Se +"초",Toast.LENGTH_SHORT).show();
-            }
-        });
+    }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 }

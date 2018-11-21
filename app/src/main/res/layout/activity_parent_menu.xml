@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/parent_menu_image"
     tools:context=".ParentActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,12 +18,13 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="40dp">
 
         <TextView
             android:id="@+id/YearText"
@@ -60,5 +62,17 @@
             android:layout_height="match_parent"
             android:layout_weight="5" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Connect"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:background="@drawable/imgbtn_connect" />
+
+    <TextView
+        android:id="@+id/SensorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2;2;" />
 
 </LinearLayout>
