@@ -67,7 +67,7 @@ public class ParentActivity extends AppCompatActivity {
 
         bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() { //데이터 수신
             public void onDataReceived(byte[] data, String message) {
-                Toast.makeText(ParentActivity.this, message, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ParentActivity.this, message, Toast.LENGTH_SHORT).show();
                 SensorText.setText(message);
             }
         });
@@ -213,7 +213,7 @@ public class ParentActivity extends AppCompatActivity {
             }
         };
         Timer timer = new Timer();
-        timer.schedule(timerTask,0,60000);  // 10초마다 반복
+        timer.schedule(timerTask,0,10000);  // 10초마다 반복
     }
 
     @Override
